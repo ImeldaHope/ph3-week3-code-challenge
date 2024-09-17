@@ -23,17 +23,32 @@ This project aims to manage and query concerts, bands, and venues using SQLAlche
 
 ### Installation
 
-1. Install dependencies:
+1. Clone the repository:
    ```bash
-   pip install sqlalchemy alembic
+   git clone git@github.com:ImeldaHope/ph3-week3-code-challenge.git
    ```
 
-2. Setup Alembic for migrations:
+2. Navigate into the project directory:
+   ```bash
+   cd ph3-week3-code-challenge
+   ```
+
+3. Install dependencies using Pipenv:
+   ```bash
+   pipenv install sqlalchemy alembic
+   ```
+   
+4. Activate the Pipenv virtual environment:
+   ```bash
+   pipenv shell
+   ```
+
+5. Setup Alembic for migrations:
    ```bash
    alembic init migrations
    ```
 
-3. Configure your `alembic.ini` and `env.py` for database connection and migrations.
+6. Configure your `alembic.ini` and `env.py` for database connection and migrations.
 
 ---
 
@@ -41,7 +56,7 @@ This project aims to manage and query concerts, bands, and venues using SQLAlche
 
 ### Migration for `Concerts` Table
 
-Before proceeding with the deliverables, you need to create the `concerts` table. A `Concert` belongs to a `Band` and a `Venue`, and the table should have the following columns:
+A `Concert` belongs to a `Band` and a `Venue`, and the table should have the following columns:
 
 - `id`: Primary key
 - `band_id`: Foreign key to `Band` table
@@ -56,7 +71,7 @@ alembic upgrade head
 
 ---
 
-
 ## Conclusion
 
 This project uses SQLAlchemy to model and query relationships between bands, concerts, and venues. The provided methods allow querying and performing aggregate functions efficiently, and SQLAlchemy's ORM features make it easy to interact with the database.
+
